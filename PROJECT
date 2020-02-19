@@ -1,0 +1,7 @@
+domain: mbell.dev
+repo: github.com/mbellgb/godoc-k8s
+resources:
+- group: go
+  kind: Package
+  version: v1alpha1
+version: "2"

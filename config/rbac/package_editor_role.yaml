@@ -1,0 +1,26 @@
+# permissions to do edit packages.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: package-editor-role
+rules:
+- apiGroups:
+  - go.mbell.dev
+  resources:
+  - packages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - go.mbell.dev
+  resources:
+  - packages/status
+  verbs:
+  - get
+  - patch
+  - update
